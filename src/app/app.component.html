@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <h1>{{title}}</h1>
-<p>{{fullName}}</p>
+<div class="container">
+<div>
+  <div *ngFor="let hair of hairList" class="hair-card">
+    <div *ngIf="hairList[6]" class="no hair">
+    <p>ID: {{hair.id}}</p>
+    <p>Hair Name: {{hair.hairName}}</p>
+    <p>Hair Type: {{hair.hairType}}</p>
+    <p>Hair Texture: {{hair.hairTexture}}</p>
+    <p>Color: {{hair.color}}</p>
+
+    </div>
+</div>
+  </div>
+
+</div>
 
 
-</body>
-</html>
