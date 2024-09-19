@@ -1,1 +1,11 @@
-<p>hair-list works!</p>
+<table>
+<tbody>
+<tr *ngFor="let hair of hairList">
+  <td>{{ hair.id }}</td>
+  <td>{{ hair.hairName }}</td>
+  <td>{{ hair.hairType }}</td>
+  <td>{{ hair.hairTexture }}</td>
+
+</tr>
+</tbody>
+</table>
