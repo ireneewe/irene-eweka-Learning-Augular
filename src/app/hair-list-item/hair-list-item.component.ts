@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {hair} from "../shared/models/hair";
 
+
 @Component({
   selector: 'app-hair-list-item',
   standalone: true,
@@ -9,5 +10,5 @@ import {hair} from "../shared/models/hair";
   styleUrl: './hair-list-item.component.css'
 })
 export class HairListItemComponent {
- @Input() Hair?: hair;
+ @Input() hairI?: hair;
 }

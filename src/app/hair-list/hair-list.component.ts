@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {hair} from "../shared/models/hair";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-hair-list',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './hair-list.component.html',
   styleUrl: './hair-list.component.css'
 })
