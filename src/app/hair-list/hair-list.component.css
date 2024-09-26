@@ -1,5 +1,8 @@
-
-p{
-  border: 2px solid black;
-  background: pink;
+.even-item {
+  background: deeppink;
 }
+
+.odd-item{
+  background: darkgray;
+}
+

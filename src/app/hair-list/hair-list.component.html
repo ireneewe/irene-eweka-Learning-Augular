@@ -1,6 +1,6 @@
 <h1>Hair List</h1>
-<p>{{hairList[0].id}}</p>
-<p>{{hairList[1].hairName}}<p>
-<p>{{hairList[2].hairTexture}}</p>
-<p>{{hairList[3].hairType}}</p>
 
+<div *ngFor="let hair of hairList; let i = index">
+<app-hair-list-item [hairI]="hair" [ngClass]="{'even-item': i % 2 === 0, 'odd-item': i % 2 === 1}" ></app-hair-list-item>
+
+</div>
