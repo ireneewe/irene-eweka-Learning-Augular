@@ -1,7 +1,22 @@
-<div *ngFor ="let hair of hairList" >
-<h3> name: {{hair.hairName}}</h3>
-  <p>Texture: {{hair.hairTexture}} </p>
-  <p>type: {{hair.hairTexture}}</p>
+<div>
 
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Texture</th>
+    <th>Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let hair of hairList" (click)="selectedHair(hair)">
+    <td>{{ hair.id }}</td>
+    <td>{{ hair.hairName }}</td>
+    <td>{{ hair.hairTexture }}</td>
+    <td>{{ hair.hairType }}</td>
+  </tr>
+  </tbody>
+</table>
 
 </div>

@@ -1,3 +1,9 @@
-<app-hair-list></app-hair-list>
+<div>
+  <h1> {{title}}</h1>
+  <!--Event Binding [] Similar to what I did in Lecture 3.
+   You will also need an Input Decerator in hair-list-item to receive the event binding here. -->
+<app-hair-list-item [hairI]  = "hairList[2]"></app-hair-list-item>
 
+<app-hair-list> </app-hair-list>
+</div>
 
