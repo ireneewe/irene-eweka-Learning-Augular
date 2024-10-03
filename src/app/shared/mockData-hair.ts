@@ -1,3 +1,4 @@
+
 import {hair} from "./models/hair";
 
 export const hairList: hair[] = [
