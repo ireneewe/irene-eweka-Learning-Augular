@@ -3,6 +3,7 @@ import {hair} from "../shared/models/hair";
 import {FormsModule} from "@angular/forms";
 import {HairListItemComponent} from "../hair-list-item/hair-list-item.component";
 import {NgClass, NgForOf} from "@angular/common";
+import {hairList} from "../shared/mockData-hair";
 
 @Component({
   selector: 'app-hair-list',
@@ -19,7 +20,5 @@ import {NgClass, NgForOf} from "@angular/common";
 export class HairListComponent {
 
 
-
-
-
+  protected readonly hairList = hairList;
 }
