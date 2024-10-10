@@ -1,9 +1,17 @@
-<div>
-  <h1> {{title}}</h1>
-  <!--Event Binding [] Similar to what I did in Lecture 3.
-   You will also need an Input Decerator in hair-list-item to receive the event binding here. -->
-<app-hair-list-item [hairI]  = "hairList[2]"></app-hair-list-item>
+  <div class="nav-bar">
+    <nav>
+      <a routerLink="/hair" routerLinkActive="active">hair List</a>
+      <a routerLink="/modify-hair" routerLinkActive="active">Modify hair</a>
+    </nav>
+  </div>
 
-<app-hair-list> </app-hair-list>
-</div>
+  <div class="app-container">
+    <h1>{{ title }}</h1>
+
+    <!--router outlet to display routed components -->
+    <router-outlet></router-outlet>
+
+  </div>
+
+  <app-hair-list> </app-hair-list>
 

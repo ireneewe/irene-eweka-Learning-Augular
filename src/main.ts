@@ -4,11 +4,16 @@ import { AppComponent } from './app/app.component';
 import {provideRouter, Routes} from "@angular/router";
 import {HairListComponent} from "./app/hair-list/hair-list.component";
 import {HairListItemComponent} from "./app/hair-list-item/hair-list-item.component";
+import {ModifyHairComponent} from "./app/Modify-hair/modify-hair.component";
+import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.component";
 
 
 const routes: Routes =[
+  {path:'', redirectTo: '/students', pathMatch: 'full'},
   {path: 'hair', component:HairListComponent},
-  {path: 'hair/:id', component: HairListItemComponent}
+  {path: 'hair/:id', component: HairListItemComponent},
+  {path: 'modify-hair', component: ModifyHairComponent},
+  {path:"**", component:PageNotFoundComponent} //error route
 ]
 
 bootstrapApplication(AppComponent, {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {hair} from "./shared/models/hair";
 import {NgForOf, NgIf} from "@angular/common";
 import {HairListComponent} from "./hair-list/hair-list.component";
@@ -9,7 +9,7 @@ import {hairList} from "./shared/mockData-hair";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, HairListComponent, HairListItemComponent],
+  imports: [RouterOutlet, NgForOf, NgIf, HairListComponent, HairListItemComponent, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
