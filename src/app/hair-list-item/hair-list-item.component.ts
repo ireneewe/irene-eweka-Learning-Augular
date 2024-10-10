@@ -1,5 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {hair} from "../shared/models/hair";
+import {ActivatedRoute, Router} from "@angular/router";
+import {HairService} from "../services/hair.service";
+import {hairList} from "../shared/mockData-hair";
 
 
 @Component({
@@ -10,5 +13,19 @@ import {hair} from "../shared/models/hair";
   styleUrl: './hair-list-item.component.css'
 })
 export class HairListItemComponent {
- @Input() hairI?: hair;
+  /*hair: hair[]; //The student to display
+  hairs: hair[] = [];// to store the list of students
+  currentIndex: number = 0
+
+
+  constructor(
+    private route: ActivatedRoute,
+    private hairService: HairService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.hairService.getHair().subscribe(hairList => {
+      this.hair = hairList;
+  }*/
 }
