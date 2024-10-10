@@ -1,17 +1,13 @@
-  <div class="nav-bar">
-    <nav>
-      <a routerLink="/hair" routerLinkActive="active">hair List</a>
-      <a routerLink="/modify-hair" routerLinkActive="active">Modify hair</a>
-    </nav>
-  </div>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/hair" routerLinkActive="active">Hair List</a>
+    <a routerLink="/modify-hair" routerLinkActive="active">Modify Hair</a>
+  </nav>
+</div>
 
-  <div class="app-container">
-    <h1>{{ title }}</h1>
+<div class="app-container">
+  <h1>{{ title }}</h1>
 
-    <!--router outlet to display routed components -->
-    <router-outlet></router-outlet>
-
-  </div>
-
-  <app-hair-list> </app-hair-list>
-
+  <!-- router outlet to display routed components dynamically -->
+  <router-outlet></router-outlet>
+</div>
