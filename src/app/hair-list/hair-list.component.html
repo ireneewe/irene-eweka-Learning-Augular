@@ -10,7 +10,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let hair of hairList" (click)="selectedHair(hair)">
+  <tr *ngFor="let hair of hairList" [routerLink]="['/hair',hair.id ]">
     <td>{{ hair.id }}</td>
     <td>{{ hair.hairName }}</td>
     <td>{{ hair.hairTexture }}</td>

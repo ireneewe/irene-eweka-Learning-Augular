@@ -5,6 +5,7 @@ import {HairListItemComponent} from "../hair-list-item/hair-list-item.component"
 import {NgClass, NgForOf} from "@angular/common";
 import {hairList} from "../shared/mockData-hair";
 import {HairService} from "../services/hair.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-hair-list',
@@ -13,7 +14,8 @@ import {HairService} from "../services/hair.service";
     FormsModule,
     HairListItemComponent,
     NgForOf,
-    NgClass
+    NgClass,
+    RouterLink
   ],
   templateUrl: './hair-list.component.html',
   styleUrl: './hair-list.component.css'
