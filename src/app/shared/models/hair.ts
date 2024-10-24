@@ -4,7 +4,7 @@ export interface hair {
   hairName:String;
   hairType: String;
   hairTexture:String;
-  color?: boolean;
+  color: boolean;
   imgPath?: String;
 
 }

@@ -9,7 +9,7 @@ import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.compone
 
 
 const routes: Routes =[
-  {path:'', redirectTo: '/students', pathMatch: 'full'},
+  {path:'', redirectTo: '/hair', pathMatch: 'full'},
   {path: 'hair', component:HairListComponent},
   {path: 'hair/:id', component: HairListItemComponent},
   {path: 'modify-hair', component: ModifyHairComponent},

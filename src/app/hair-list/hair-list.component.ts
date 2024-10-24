@@ -5,7 +5,7 @@ import {HairListItemComponent} from "../hair-list-item/hair-list-item.component"
 import {NgClass, NgForOf} from "@angular/common";
 import {hairList} from "../shared/mockData-hair";
 import {HairService} from "../services/hair.service";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-hair-list',
@@ -22,11 +22,13 @@ import {RouterLink} from "@angular/router";
 })
 export class HairListComponent implements OnInit{
 
-  displayColomus:String[]=['id', 'name', 'texture', 'type'];
+  // displayColomus:String[]=['id', 'name', 'texture', 'type'];
   hairList: hair[] =[];
 
-  constructor(private hairService: HairService) {
+  constructor(private hairService: HairService,
+              private router : Router) {
   }
+
   ngOnInit() {
     this.hairService.getHair().subscribe({
       next: (data: hair[]) => this.hairList = data,
@@ -34,6 +36,16 @@ export class HairListComponent implements OnInit{
       complete:() => console.log("finding completed ")
     })
   }
+
+//redirect to the form
+  onEdit(): void {
+    this.router.navigate(['/modify-hair']);
+  }
+
+  onDelete(): void{
+
+  }
+
   selectedHairItem?: hair;
   selectedHair(hair: hair): void{
     this.selectedHairItem = hair;

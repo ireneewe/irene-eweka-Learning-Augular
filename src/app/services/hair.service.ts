@@ -34,5 +34,9 @@ export class HairService {
     const hair = this.hair.find(hairList => hairList.id === hairId);
     return of ();
 }
+  generateNewId(): number {
+    return this.hair.length > 0 ? Math.max(...this.hair.map(hairList => hairList.id)) + 1 : 1;
+  }
+
 
 }

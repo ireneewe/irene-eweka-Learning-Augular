@@ -1,24 +1,28 @@
-<div>
+<div class="hair-table-container">
 
-<table>
-  <thead>
-  <tr>
-    <th>Image</th>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Texture</th>
-    <th>Type</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let hair of hairList" [routerLink]="['/hair',hair.id ]">
-    <td><img [src]="hair.imgPath"></td>
-    <td>{{ hair.id }}</td>
-    <td>{{ hair.hairName }}</td>
-    <td>{{ hair.hairTexture }}</td>
-    <td>{{ hair.hairType }}</td>
-  </tr>
-  </tbody>
-</table>
+  <table class="hair-table">
+    <thead>
+    <tr>
+      <th class="table-header">Image</th>
+      <th class="table-header">ID</th>
+      <th class="table-header">Name</th>
+      <th class="table-header">Texture</th>
+      <th class="table-header">Type</th>
+      <th class="table-header">Edit</th>
+      <th class="table-header">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hair of hairList" [routerLink]="['/hair', hair.id]" class="table-row">
+      <td class="table-cell"><img [src]="hair.imgPath" class="hair-image"></td>
+      <td class="table-cell">{{ hair.id }}</td>
+      <td class="table-cell">{{ hair.hairName }}</td>
+      <td class="table-cell">{{ hair.hairTexture }}</td>
+      <td class="table-cell">{{ hair.hairType }}</td>
+      <td class="table-cell"><button type="button" (click)="onEdit()" class="btn edit-btn">Edit</button></td>
+      <td class="table-cell"><button type="button" (click)="onDelete()" class="btn delete-btn">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
 
 </div>
