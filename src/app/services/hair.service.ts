@@ -26,9 +26,13 @@ export class HairService {
       }
       return of (this.hair);
   }
-  deleteHair(hairId: number ): Observable<hair[]>{
-    this.hair = this.hair.filter(hairList => hairList.id !== hairId);
-    return of(this.hair);
+  deleteHair(hairId: number ){
+
+    console.log("Service Delete Working");
+    delete this.hair[hairId - 1]
+
+    // this.hair = this.hair.filter(hairList => hairList.id !== hairId);
+    // return of(this.hair);
   }
   getHairById(hairId: number): Observable<hair | undefined>{
     const hair = this.hair.find(hairList => hairList.id === hairId);
@@ -37,6 +41,5 @@ export class HairService {
   generateNewId(): number {
     return this.hair.length > 0 ? Math.max(...this.hair.map(hairList => hairList.id)) + 1 : 1;
   }
-
 
 }

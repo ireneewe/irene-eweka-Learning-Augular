@@ -22,6 +22,8 @@ import {Router, RouterLink} from "@angular/router";
 })
 export class HairListComponent implements OnInit{
 
+  //deleted: boolean = true;
+
   // displayColomus:String[]=['id', 'name', 'texture', 'type'];
   hairList: hair[] =[];
 
@@ -42,9 +44,11 @@ export class HairListComponent implements OnInit{
     this.router.navigate(['/modify-hair']);
   }
 
-  onDelete(): void{
+  onDelete(hairId: number): void {
 
-  }
+    this.hairService.deleteHair(hairId);
+    }
+
 
   selectedHairItem?: hair;
   selectedHair(hair: hair): void{

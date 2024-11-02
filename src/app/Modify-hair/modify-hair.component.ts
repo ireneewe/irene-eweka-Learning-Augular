@@ -20,15 +20,14 @@ export class ModifyHairComponent implements OnInit{
     private hairService: HairService,
     private router: Router
   ) {
+
     this.hairForm = this.fb.group({
       id: ['', Validators.required], //ID is required
       hairName: ['', Validators.required],//First name is required
       hairType: ['', Validators.required],
       hairTexture: ['', Validators.required],
       color: [''],
-
     });
-
   }
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -38,7 +37,6 @@ export class ModifyHairComponent implements OnInit{
         this.hairForm.patchValue(hairList);
       }
     });
-
     }
   }
   onSubmit(): void {
@@ -55,13 +53,11 @@ export class ModifyHairComponent implements OnInit{
     }
     this.router.navigate(['/hair']);
   }
-
   onAdd(): void {
     this.onSubmit()
   }
   onUpdate(): void {
     this.onSubmit()
-
   }
 }
 
