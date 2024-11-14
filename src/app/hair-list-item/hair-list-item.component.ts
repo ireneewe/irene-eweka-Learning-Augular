@@ -3,14 +3,18 @@ import {hair} from "../shared/models/hair";
 import {ActivatedRoute, Router} from "@angular/router";
 import {HairService} from "../services/hair.service";
 import {hairList} from "../shared/mockData-hair";
-import {NgIf} from "@angular/common";
-
+import {NgForOf, NgIf} from "@angular/common";
+import {CurrencyPipe,UpperCasePipe,LowerCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-hair-list-item',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    NgForOf,
+    CurrencyPipe,
+    UpperCasePipe,
+    LowerCasePipe
   ],
   templateUrl: './hair-list-item.component.html',
   styleUrl: './hair-list-item.component.css'
@@ -30,4 +34,6 @@ export class HairListItemComponent implements OnInit{
       this.hair = this.hairService.getHairById(+id); // Fetch hair data from a service (example)
     }
   }
+
+  protected readonly hairList = hairList;
 }

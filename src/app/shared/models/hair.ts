@@ -1,10 +1,11 @@
 export interface hair {
   //What describes hair
   id:number;
-  hairName:String;
-  hairType: String;
-  hairTexture:String;
+  hairName:string;
+  hairType: string;
+  hairTexture:string;
   color: boolean;
-  imgPath?: String;
+  amount: number;
+  imgPath?: string;
 
 }

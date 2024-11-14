@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {hair} from "../shared/models/hair";
 import {FormsModule} from "@angular/forms";
 import {HairListItemComponent} from "../hair-list-item/hair-list-item.component";
-import {NgClass, NgForOf} from "@angular/common";
+import {CurrencyPipe, LowerCasePipe, NgClass, NgForOf, UpperCasePipe} from "@angular/common";
 import {hairList} from "../shared/mockData-hair";
 import {HairService} from "../services/hair.service";
 import {Router, RouterLink} from "@angular/router";
@@ -15,7 +15,10 @@ import {Router, RouterLink} from "@angular/router";
     HairListItemComponent,
     NgForOf,
     NgClass,
-    RouterLink
+    RouterLink,
+    CurrencyPipe,
+    UpperCasePipe,
+    LowerCasePipe,
   ],
   templateUrl: './hair-list.component.html',
   styleUrl: './hair-list.component.css'
