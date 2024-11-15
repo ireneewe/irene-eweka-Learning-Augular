@@ -6,6 +6,7 @@ import {CurrencyPipe, LowerCasePipe, NgClass, NgForOf, UpperCasePipe} from "@ang
 import {hairList} from "../shared/mockData-hair";
 import {HairService} from "../services/hair.service";
 import {Router, RouterLink} from "@angular/router";
+import {HairLengthPipe} from "../pipes/hair-length.pipe";
 
 @Component({
   selector: 'app-hair-list',
@@ -19,6 +20,7 @@ import {Router, RouterLink} from "@angular/router";
     CurrencyPipe,
     UpperCasePipe,
     LowerCasePipe,
+    HairLengthPipe,
   ],
   templateUrl: './hair-list.component.html',
   styleUrl: './hair-list.component.css'
