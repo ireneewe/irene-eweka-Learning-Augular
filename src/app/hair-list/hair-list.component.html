@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let hair of hairList" [routerLink]="['/hair',hair.id]" class="table-row">
+      <tr *ngFor="let hair of hairList" [routerLink]="['/hair',hair.id]" [appHoverHighlight]="'pink'" class="table-row">
         <td class="table-cell"><img [src]="hair.imgPath" class="hair-image"></td>
         <td class="table-cell">{{ hair.id }}</td>
 <!--        <td class="table-cell">{{ hair.hairName | uppercase }}</td>-->

@@ -15,7 +15,7 @@
 }
 
 .table-header {
-  background-color: #007bff;
+  background-color: #6c757d; /* Changed to gray */
   color: white;
   padding: 12px;
   text-align: left;

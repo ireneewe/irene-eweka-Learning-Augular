@@ -7,6 +7,7 @@ import {hairList} from "../shared/mockData-hair";
 import {HairService} from "../services/hair.service";
 import {Router, RouterLink} from "@angular/router";
 import {HairLengthPipe} from "../pipes/hair-length.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-hair-list',
@@ -21,6 +22,7 @@ import {HairLengthPipe} from "../pipes/hair-length.pipe";
     UpperCasePipe,
     LowerCasePipe,
     HairLengthPipe,
+    HoverHighlightDirective,
   ],
   templateUrl: './hair-list.component.html',
   styleUrl: './hair-list.component.css'
