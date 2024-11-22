@@ -4,12 +4,14 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validator, Val
 import {hair} from "../shared/models/hair";
 import {HairService} from "../services/hair.service";
 import {hairList} from "../shared/mockData-hair";
+import {FocusDirective} from "../directives/focus.directive";
 @Component({
   selector: 'app-Modify-hair',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective],
   templateUrl: './modify-hair.component.html',
-  styleUrl: './modify-hair.component.css'
+  styleUrl: './modify-hair.component.css',
+
 })
 export class ModifyHairComponent implements OnInit{
   hairForm: FormGroup;
