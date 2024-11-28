@@ -8,10 +8,11 @@ import {FocusDirective} from "../directives/focus.directive";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatCheckbox} from "@angular/material/checkbox";
+import {MatTooltip} from "@angular/material/tooltip";
 @Component({
   selector: 'app-Modify-hair',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatLabel, MatCheckbox],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatLabel, MatCheckbox, MatTooltip],
   templateUrl: './modify-hair.component.html',
   styleUrl: './modify-hair.component.css',
 

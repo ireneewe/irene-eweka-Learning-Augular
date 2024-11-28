@@ -1,13 +1,28 @@
-<div class="nav-bar">
-  <nav>
-    <a routerLink="/hair" routerLinkActive="active">Hair List</a>
-    <a routerLink="/modify-hair" routerLinkActive="active">Modify Hair</a>
-  </nav>
-</div>
+<!--<div class="nav-bar">-->
+<!--  <nav>-->
+<!--    <a routerLink="/hair" routerLinkActive="active">Hair List</a>-->
+<!--    <a routerLink="/modify-hair" routerLinkActive="active">Modify Hair</a>-->
+<!--  </nav>-->
+<!--</div>-->
+
+<!--<div class="app-container">-->
+<!--  <h1>{{ title }}</h1>-->
+
+<!--  &lt;!&ndash; router outlet to display routed components dynamically &ndash;&gt;-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
+
+
+<mat-toolbar color="primary">
+  <span>Irene hair store</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/hair" routerLinkActive="active">Hair List</button>
+  <button mat-button routerLink="/modify-hair" routerLinkActive="active">Modify Hair</button>
+</mat-toolbar>
 
 <div class="app-container">
   <h1>{{ title }}</h1>
 
-  <!-- router outlet to display routed components dynamically -->
+  <!--router outlet to display routed components -->
   <router-outlet></router-outlet>
 </div>

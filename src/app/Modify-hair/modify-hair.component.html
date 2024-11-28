@@ -1,54 +1,27 @@
 <form [formGroup]="hairForm" (ngSubmit)="onSubmit()"  class="mat-form">
 
-<!--  <div class="form-group">-->
-<!--    <label for="id">ID</label>-->
-<!--    <input type="number" id="id" formControlName="id" class="form-input" [appFocus]="'green'"/>-->
-<!--  </div>-->
-
   <mat-form-field appearance="outline" class="form-field" disabled [appFocus]="'green'">
     <mat-label>ID</mat-label>
-    <input matInput type="number" formControlName="id" />
+    <input matInput type="number" formControlName="id" matTooltip=" add an id " />
   </mat-form-field>
-
-
-<!--  <div class="form-group">-->
-<!--    <label for="hairName">Hair Name</label>-->
-<!--    <input type="text" id="hairName" formControlName="hairName" class="form-input" [appFocus]="'green'" />-->
-<!--  </div>-->
 
   <mat-form-field appearance="outline" class="form-field" [appFocus]="'green'">
     <mat-label>Hair Name</mat-label>
-    <input matInput type="text" formControlName="hairName" appAutoFocus />
+    <input matInput type="text" formControlName="hairName" appAutoFocus  matTooltip=" add hair name "/>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="form-field" [appFocus]="'green'">
     <mat-label>Hair Type</mat-label>
-    <input matInput type="text" formControlName="hairType" appAutoFocus />
+    <input matInput type="text" formControlName="hairType" appAutoFocus  matTooltip=" add hair type " />
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="form-field" [appFocus]="'green'">
     <mat-label>Hair Texture</mat-label>
-    <input matInput type="text" formControlName="hairTexture" appAutoFocus />
+    <input matInput type="text" formControlName="hairTexture" appAutoFocus  matTooltip=" add hair texture "/>
   </mat-form-field>
 
-  <mat-checkbox formControlName="isAdmin" class="color">Hair Color</mat-checkbox>
+  <mat-checkbox formControlName="isAdmin" matTooltip=" check if neeeded " class="color">Hair Color</mat-checkbox>
 
-  <!-- Buttons -->
-
-<!--  <div class="form-group">-->
-<!--    <label for="hairType">Hair Type</label>-->
-<!--    <input type="text" id="hairType" formControlName="hairType" class="form-input" [appFocus]="'green'"/>-->
-<!--  </div>-->
-
-<!--  <div class="form-group">-->
-<!--    <label for="hairTexture">Hair Texture</label>-->
-<!--    <input type="text" id="hairTexture" formControlName="hairTexture" class="form-input" [appFocus]="'green'"/>-->
-<!--  </div>-->
-
-<!--  <div class="form-group">-->
-<!--    <label for="color" class="checkbox-label">Hair Color</label>-->
-<!--    <input type="checkbox" id="color" formControlName="color" class="form-checkbox" [appFocus]="'blue'"/>-->
-<!--  </div>-->
 
   <div class="form-buttons">
     <button type="button" (click)="onAdd()" class="btn add-btn">Add</button>

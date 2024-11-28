@@ -5,11 +5,13 @@ import {NgForOf, NgIf} from "@angular/common";
 import {HairListComponent} from "./hair-list/hair-list.component";
 import {HairListItemComponent} from "./hair-list-item/hair-list-item.component";
 import {hairList} from "./shared/mockData-hair";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, HairListComponent, HairListItemComponent, RouterLinkActive, RouterLink],
+  imports: [RouterOutlet, NgForOf, NgIf, HairListComponent, HairListItemComponent, RouterLinkActive, RouterLink, MatToolbar, MatButton],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
