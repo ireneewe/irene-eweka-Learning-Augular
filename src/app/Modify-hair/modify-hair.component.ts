@@ -5,10 +5,13 @@ import {hair} from "../shared/models/hair";
 import {HairService} from "../services/hair.service";
 import {hairList} from "../shared/mockData-hair";
 import {FocusDirective} from "../directives/focus.directive";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {MatCheckbox} from "@angular/material/checkbox";
 @Component({
   selector: 'app-Modify-hair',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, FocusDirective],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatLabel, MatCheckbox],
   templateUrl: './modify-hair.component.html',
   styleUrl: './modify-hair.component.css',
 

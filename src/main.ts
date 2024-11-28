@@ -3,6 +3,7 @@ import { AppComponent } from './app/app.component';
 import {provideRouter, Routes} from "@angular/router";
 import {HairListComponent} from "./app/hair-list/hair-list.component";
 import {importProvidersFrom} from "@angular/core";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 const routes: Routes =[
@@ -22,6 +23,6 @@ const routes: Routes =[
 bootstrapApplication(AppComponent, {
  providers:[
    provideRouter(routes),
- importProvidersFrom()]
+ importProvidersFrom(), provideAnimationsAsync()]
 })
   .catch((err) => console.error(err));
